@@ -9,8 +9,18 @@ RUN apt-get update
 
 RUN apt-get install nodejs -y
 RUN apt-get install npm -y
+
 RUN apt-get install curl -y
-RUN apt-get install php -y
+
+
+RUN apt-get update
+RUN apt -y install software-properties-common
+RUN add-apt-repository ppa:ondrej/php
+RUN apt-get update
+RUN apt -y install php7.4
+#RUN apt-get install -y php7.4-{bcmath,bz2,intl,gd,mbstring,mysql,zip}
+
+
 
 # composer
 RUN curl -s https://getcomposer.org/installer | php
