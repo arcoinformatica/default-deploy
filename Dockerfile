@@ -18,7 +18,7 @@ RUN apt -y install software-properties-common
 RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update
 RUN apt -y install php7.4
-RUN apt-get install php7.4-dom
+RUN apt-get -y install php7.4-dom
 #RUN apt-get install -y php7.4-{bcmath,bz2,intl,gd,mbstring,mysql,zip}
 
 
