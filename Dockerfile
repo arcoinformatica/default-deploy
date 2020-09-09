@@ -18,6 +18,7 @@ RUN apt -y install software-properties-common
 RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update
 RUN apt -y install php7.4
+RUN apt-get install php7.4-dom
 #RUN apt-get install -y php7.4-{bcmath,bz2,intl,gd,mbstring,mysql,zip}
 
 
@@ -25,8 +26,10 @@ RUN apt -y install php7.4
 RUN curl -s https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
 
+
 RUN npm install -g sass -y
 RUN npm install -g grunt -y
 
 RUN apt-get install openssh-client -y
 RUN apt-get install zip -y
+
